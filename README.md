@@ -1,0 +1,2 @@
+# DinerBot
+Discord Music Bot
