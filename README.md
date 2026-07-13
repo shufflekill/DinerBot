@@ -6,6 +6,7 @@ Discord Music Bot
 DinerBot is a Discord music and utility bot built for smooth server playback and controlled downloads. It supports streaming music with !play, queueing tracks automatically, viewing and managing the queue, and downloading audio through /ytmp3 with per-server role-based access. The bot also includes server-specific configuration, voice playback controls, and a clean modular cog structure designed to keep features organized and easy to maintain.
 
 Feature list
+
 !play - streams music from YouTube or search terms and queues tracks when something is already playing.
 
 !queue - shows the current queue and upcoming tracks.
