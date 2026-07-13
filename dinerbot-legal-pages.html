@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>DinerBot Legal Pages</title>
+<style>
+:root{--bg:#08111d;--panel:#101a2a;--panel2:#0d1522;--text:#e8eef8;--muted:#9aa8bd;--accent:#f59e0b;--line:#223149;--code:#0c1728;--good:#22c55e}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#06101a 0%, #08111d 100%);color:var(--text)}
+a{color:#fde68a;text-decoration:none}
+.container{max-width:1060px;margin:0 auto;padding:40px 20px 60px}
+.hero{background:linear-gradient(135deg, rgba(16,26,42,.98), rgba(12,23,40,.98));border:1px solid var(--line);border-radius:26px;padding:34px 28px;box-shadow:0 18px 60px rgba(0,0,0,.35)}
+.badge{display:inline-block;background:rgba(245,158,11,.14);color:#fde68a;border:1px solid rgba(245,158,11,.25);padding:6px 12px;border-radius:999px;font-size:13px;margin-bottom:14px}
+h1{margin:0 0 10px;font-size:42px} .subtitle{margin:0;color:var(--muted);font-size:17px;max-width:900px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.card{background:rgba(16,26,42,.95);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.22)}
+h2{margin:0 0 14px;font-size:23px;color:#fff7ed}
+h3{margin:18px 0 10px;font-size:18px;color:#fff}
+.muted{color:var(--muted)}
+.section{margin-top:22px}
+.list{display:grid;gap:10px}
+.item{padding:12px 14px;background:rgba(12,23,40,.9);border:1px solid var(--line);border-radius:14px}
+.item b{color:#fff7ed}
+.item span{display:block;color:var(--muted);margin-top:4px}
+code{background:var(--code);border:1px solid var(--line);padding:2px 6px;border-radius:8px;color:#fff2cc}
+pre{margin:0;background:#09101b;border:1px solid var(--line);padding:16px;border-radius:14px;overflow:auto;color:#f8fafc;white-space:pre-wrap}
+ul{margin:10px 0 0 18px;color:var(--text)} li{margin:8px 0}
+.callout{border-left:4px solid var(--accent);padding:14px 16px;background:rgba(245,158,11,.08);border-radius:12px;color:#fde68a}
+.footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:900px){.grid{grid-template-columns:1fr} h1{font-size:34px}}
+</style>
+</head>
+<body>
+<div class='container'>
+  <div class='hero'>
+    <div class='badge'>DinerBot • Legal Pages</div>
+    <h1>Privacy Policy and Terms</h1>
+    <p class='subtitle'>A clean, current, end-user-friendly legal page for DinerBot. It explains what the bot collects, how it uses data, and how temporary files and server settings are handled.</p>
+  </div>
+
+  <div class='grid'>
+    <div class='card'>
+      <h2>Privacy Policy</h2>
+      <div class='section'>
+        <h3>What DinerBot uses</h3>
+        <div class='list'>
+          <div class='item'><b>Message content</b><span>Used only to detect and respond to prefix commands such as <code>!play</code>. This is necessary for the bot’s music features.</span></div>
+          <div class='item'><b>Voice state</b><span>Used to join, move, pause, resume, and leave voice channels for music playback.</span></div>
+          <div class='item'><b>Guild settings</b><span>Per-server configuration is stored in <code>config.json</code>, including the role allowed to use <code>/ytmp3</code>.</span></div>
+          <div class='item'><b>Temporary files</b><span>MP3 files created by <code>/ytmp3</code> are temporary and are deleted after being sent whenever possible.</span></div>
+        </div>
+      </div>
+
+      <div class='section'>
+        <h3>What DinerBot does not do</h3>
+        <ul>
+          <li>It does not sell your data.</li>
+          <li>It does not intentionally collect private messages beyond command handling.</li>
+          <li>It does not keep MP3 files permanently after delivery.</li>
+          <li>It does not share server configuration with third parties.</li>
+        </ul>
+      </div>
+
+      <div class='section'>
+        <h3>Retention</h3>
+        <p class='muted'>Server settings remain stored until a server admin changes or clears them. Temporary download files are removed after use when the bot is able to do so. Logs, if enabled, should be limited to operational and error information only.</p>
+      </div>
+
+      <div class='section'>
+        <h3>Data requests</h3>
+        <p class='muted'>If you are a server owner and want your guild settings removed, or if you have any questions about data handling, contact the bot owner directly.</p>
+      </div>
+    </div>
+
+    <div class='card'>
+      <h2>Terms of Service</h2>
+      <div class='section'>
+        <h3>Acceptable use</h3>
+        <ul>
+          <li>Do not abuse the bot or automate spam commands.</li>
+          <li>Do not attempt to bypass role restrictions for <code>/ytmp3</code>.</li>
+          <li>Do not use the bot in ways that violate Discord’s rules or local laws.</li>
+          <li>Respect server staff decisions and command permissions.</li>
+        </ul>
+      </div>
+
+      <div class='section'>
+        <h3>Music and downloads</h3>
+        <div class='callout'>
+          <b>Important:</b> <code>!play</code> streams audio and queues tracks. <code>/ytmp3</code> is a separate download feature and may be restricted by the server.
+        </div>
+      </div>
+
+      <div class='section'>
+        <h3>Service limits</h3>
+        <ul>
+          <li>The bot may fail if Discord or YouTube changes their APIs or policies.</li>
+          <li>Temporary files and sessions may be refreshed or recreated during updates.</li>
+          <li>Features can be changed or removed if required for reliability or compliance.</li>
+        </ul>
+      </div>
+
+      <div class='section'>
+        <h3>Disclaimer</h3>
+        <p class='muted'>DinerBot is provided as-is, without warranties. Use it at your own risk, and ensure your server settings match your moderation and privacy expectations.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class='card section'>
+    <h2>Bot behavior summary</h2>
+    <div class='list'>
+      <div class='item'><b>Prefix commands</b><span>Uses message content only to process commands like <code>!play</code>.</span></div>
+      <div class='item'><b>Slash commands</b><span>Uses application commands for features like <code>/ytmp3</code> and role configuration.</span></div>
+      <div class='item'><b>Storage</b><span>Stores only the settings needed for bot operation, such as the allowed role for downloads.</span></div>
+      <div class='item'><b>Cleanup</b><span>Temporary files are deleted after use when possible.</span></div>
+    </div>
+  </div>
+
+  <div class='footer'>DinerBot • Legal pages for end users and server admins</div>
+</div>
+</body>
+</html>
