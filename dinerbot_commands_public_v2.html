@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>DinerBot Commands</title>
+<style>
+:root{--bg:#0a0f1a;--panel:#101826;--panel2:#0d1522;--text:#e8eef8;--muted:#93a4bf;--accent:#d97706;--accent2:#f59e0b;--line:#223149;--code:#131d2f;--success:#22c55e}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:radial-gradient(circle at top, rgba(245,158,11,.12), transparent 28%), linear-gradient(180deg,#07101c 0%, #0a0f1a 100%);color:var(--text)}
+a{color:#fde68a;text-decoration:none}
+.container{max-width:1040px;margin:0 auto;padding:40px 20px 60px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg, rgba(16,24,38,.98), rgba(13,21,34,.98));border:1px solid var(--line);border-radius:26px;padding:34px 28px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg, rgba(217,119,6,.22), transparent 40%, transparent 60%, rgba(245,158,11,.12));pointer-events:none}
+.badge{display:inline-block;background:rgba(217,119,6,.16);color:#fcd34d;border:1px solid rgba(245,158,11,.25);padding:6px 12px;border-radius:999px;font-size:13px;margin-bottom:16px;position:relative;z-index:1}
+h1{margin:0 0 10px;font-size:42px;line-height:1.1;position:relative;z-index:1} .subtitle{color:var(--muted);font-size:18px;max-width:800px;position:relative;z-index:1}
+.grid{display:grid;grid-template-columns:1.3fr .9fr;gap:20px;margin-top:22px}
+.card{background:linear-gradient(180deg, rgba(16,24,38,.96), rgba(13,21,34,.96));border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.22)}
+h2{margin:0 0 14px;font-size:24px;color:#fff7ed} h3{margin:0 0 10px;font-size:18px;color:#fff}
+.section-note{color:var(--muted);font-size:14px;margin-top:-6px;margin-bottom:14px}
+.command{display:flex;justify-content:space-between;gap:18px;padding:14px 0;border-top:1px solid rgba(34,49,73,.7)}
+.command:first-of-type{border-top:none;padding-top:0}.command:last-of-type{padding-bottom:0}
+.cmd{font-family:ui-monospace,SFMono-Regular,Consolas,Monaco,monospace;background:var(--code);border:1px solid #283956;border-radius:10px;padding:7px 10px;white-space:nowrap;display:inline-block;color:#fff2cc}
+.desc{color:var(--text);flex:1}.meta{color:var(--muted);font-size:14px;margin-top:4px}
+.table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:14px;border:1px solid var(--line)}
+.table th,.table td{padding:12px 14px;border-bottom:1px solid rgba(34,49,73,.7);vertical-align:top;text-align:left}.table th{background:rgba(19,29,47,.95);color:#fff7ed}.table tr:last-child td{border-bottom:none}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:14px}.pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(217,119,6,.13);border:1px solid rgba(245,158,11,.22);color:#fde68a;font-size:13px}
+pre{margin:0;background:#09101b;border:1px solid var(--line);padding:16px;border-radius:14px;overflow:auto;color:#f8fafc}
+ul{margin:10px 0 0 18px;color:var(--text)} li{margin:8px 0}.muted{color:var(--muted)}
+.footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+@media (max-width: 860px){.grid,.kv{grid-template-columns:1fr} h1{font-size:34px}}
+</style>
+</head>
+<body>
+<div class='container'>
+  <div class='hero'>
+    <div class='badge'>DinerBot • Music & Downloads</div>
+    <h1>Commands Guide</h1>
+    <div class='subtitle'>Use <code class='cmd'>!play</code> to stream music and queue songs. Use <code class='cmd'>/ytmp3</code> to download a file when you have access.</div>
+  </div>
+
+  <div class='grid'>
+    <div class='card'>
+      <h2>Music Commands</h2>
+      <div class='section-note'>These commands control playback in voice channels.</div>
+      <div class='command'><div class='desc'><div class='cmd'>!play / !p</div><div class='meta'>Searches YouTube or accepts a URL. If something is already playing, the song is queued.</div></div></div>
+      <div class='command'><div class='desc'><div class='cmd'>!queue</div><div class='meta'>Shows the current queue and what is playing now.</div></div></div>
+      <div class='command'><div class='desc'><div class='cmd'>!nowplaying / !np</div><div class='meta'>Shows the current track and its link.</div></div></div>
+      <div class='command'><div class='desc'><div class='cmd'>!clearqueue</div><div class='meta'>Clears the upcoming queue.</div></div></div>
+      <div class='command'><div class='desc'><div class='cmd'>!remove &lt;index&gt;</div><div class='meta'>Removes a queued song by its number.</div></div></div>
+      <div class='command'><div class='desc'><div class='cmd'>!skip</div><div class='meta'>Skips the current song and moves to the next queued item.</div></div></div>
+      <div class='command'><div class='desc'><div class='cmd'>!pause</div><div class='meta'>Pauses playback.</div></div></div>
+      <div class='command'><div class='desc'><div class='cmd'>!resume</div><div class='meta'>Resumes playback.</div></div></div>
+      <div class='command'><div class='desc'><div class='cmd'>!stop</div><div class='meta'>Stops playback, clears the queue, and disconnects the bot.</div></div></div>
+    </div>
+
+    <div class='card'>
+      <h2>Download Commands</h2>
+      <div class='section-note'>These commands are for MP3 downloads and access control.</div>
+      <div class='command'><div class='desc'><div class='cmd'>/ytmp3</div><div class='meta'>Downloads a YouTube video as MP3. Access is controlled by the server role set by staff.</div></div></div>
+      <div class='command'><div class='desc'><div class='cmd'>/setytmp3role</div><div class='meta'>Sets which role can use <code>/ytmp3</code>. Requires Manage Server.</div></div></div>
+      <div class='command'><div class='desc'><div class='cmd'>/clearytmp3role</div><div class='meta'>Removes the role restriction for <code>/ytmp3</code>. Requires Manage Server.</div></div></div>
+    </div>
+  </div>
+
+  <div class='grid'>
+    <div class='card'>
+      <h2>Admin Notes</h2>
+      <div class='section-note'>Access can be managed without editing code.</div>
+      <div class='kv'>
+        <div><span class='pill'>Server setting</span><p class='muted'>Choose the role that can use <code>/ytmp3</code>.</p></div>
+        <div><span class='pill'>Automatic</span><p class='muted'>The bot remembers the role per server in <code>config.json</code>.</p></div>
+        <div><span class='pill'>Safe fallback</span><p class='muted'>If no role is set, the command can be left open or restricted by staff.</p></div>
+        <div><span class='pill'>Permissions</span><p class='muted'>Server staff can update access whenever needed.</p></div>
+      </div>
+    </div>
+
+    <div class='card'>
+      <h2>Config Snapshot</h2>
+      <div class='section-note'>Example of how the role setting is stored.</div>
+      <pre>{
+  "guilds": {
+    "123456789012345678": {
+      "ytmp3_role_id": 987654321098765432
+    }
+  }
+}</pre>
+    </div>
+  </div>
+
+  <div class='card' style='margin-top:20px'>
+    <h2>Quick Tips</h2>
+    <ul>
+      <li>Join a voice channel before using <code class='cmd'>!play</code>.</li>
+      <li>If a song is already playing, <code class='cmd'>!play</code> adds it to the queue instead of interrupting playback.</li>
+      <li>If you cannot use <code class='cmd'>/ytmp3</code>, ask a server admin to set the allowed role.</li>
+    </ul>
+  </div>
+
+  <div class='footer'>DinerBot • Built for music streaming and controlled downloads</div>
+</div>
+</body>
+</html>
